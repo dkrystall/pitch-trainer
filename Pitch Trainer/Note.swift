@@ -14,7 +14,7 @@ class Note {
     var octave:Int?
     var midi:Int?
     
-    init(pitch: Double, noteName: String, octave: Int?, midi: Int?){
+    init(pitch: Double, noteName: String, octave: Int?, midi: Int){
         self.pitch = pitch
         self.noteName = noteName
         self.octave = octave

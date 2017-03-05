@@ -17,9 +17,10 @@ class FirstViewController: UIViewController {
     var midiValue:Int = 60
     
     var noteChoice:String?
-    var octaveChoice:String?
+    var octaveChoice:Int?
     
-    
+    var noteAnswer = ""
+    var octaveAnswer = 0
     
     @IBOutlet var noteChoiceLabel: UILabel!
     @IBOutlet var octaveChoiceLabel: UILabel!
@@ -42,29 +43,79 @@ class FirstViewController: UIViewController {
         addButtonBorder(button: buttonE)
         addButtonBorder(button: buttonF)
         addButtonBorder(button: buttonG)
+        refreshNote()
+        
+        
+
+    }
+    func refreshNote(){
+        DispatchQueue.main.asyncAfter(deadline: .now()){
+            let queryBuilder = QueryBuilder()
+            let deckBuilder = DeckBuilder()
+            let randomNote = deckBuilder.getRandomNote()
+            let randomOctave = deckBuilder.getRandomOctave()
+            let queryString = queryBuilder.noteQuery(note: randomNote, octave: randomOctave)
+            let _ = queryBuilder.getNoteFromWolfram(queryString: queryString)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)){
+                self.midiValue = UserDefaults.standard.value(forKey: "midi") as! Int
+                self.noteAnswer = UserDefaults.standard.value(forKey: "noteName") as! String
+                self.octaveAnswer = UserDefaults.standard.value(forKey: "noteOctave") as! Int
+            }
+            
+        }
+
     }
     @IBAction func buttonPressed(sender: UIButton){
         print("button pressed")
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+            print("You pressed OK")
+        }
+        
+        if(noteAnswer == noteChoice && octaveAnswer == octaveChoice){
+            print("You win!")
+            
+            refreshNote()
+            let alertController = UIAlertController(title: "Congrats!", message: "You won! Play again.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+
+        } else {
+            print("Guess again")
+            if ( noteAnswer > noteChoice!){
+            let retryAlertController = UIAlertController(title: "Dagnabbit!", message: "That's not quite right, try again. Hint: Try a higher note", preferredStyle: UIAlertControllerStyle.alert)
+            
+            retryAlertController.addAction(okAction)
+            self.present(retryAlertController, animated: false, completion: nil)
+            } else if ( noteAnswer < noteChoice!){
+                let retryAlertController = UIAlertController(title: "Dagnabbit!", message: "That's not quite right, try again. Hint: Try a lower note", preferredStyle: UIAlertControllerStyle.alert)
+                
+                retryAlertController.addAction(okAction)
+                self.present(retryAlertController, animated: false, completion: nil)
+            } else {
+                let retryAlertController = UIAlertController(title: "Dagnabbit!", message: "That's not quite right, try again. Hint: Change your octave", preferredStyle: UIAlertControllerStyle.alert)
+                
+                retryAlertController.addAction(okAction)
+                self.present(retryAlertController, animated: false, completion: nil)
+            }
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        midiValue = UserDefaults.standard.value(forKey: "midi") as! Int
+        //midiValue = UserDefaults.standard.value(forKey: "midi") as! Int
         self.sound = Sound()
         self.midiSampler = MIDISampler()
-    }
-    
-    // instance variables
-    let melodicBank = UInt8(kAUSampler_DefaultMelodicBankMSB)
-    let defaultBankLSB = UInt8(kAUSampler_DefaultBankLSB)
-    let gmMarimba = UInt8(12)
-    let gmHarpsichord = UInt8(6)
-    
-    
-    @IBAction func treblePressed(_ sender: Any) {
-        print("replay requested")
-        midiSampler.hstart(midi: midiValue)
         
     }
+    
+    @IBAction func treblePressed(_ sender: Any) {
+        print("Play requested")
+        midiSampler.hstart(midi: midiValue)
+    }
+    
     @IBAction func stopPressed(_ sender: Any) {
         midiSampler.hstop(midi: midiValue)
     }
@@ -116,33 +167,31 @@ class FirstViewController: UIViewController {
     }
     @IBAction func oneButton(_ sender: Any) {
         setOctaveLabe(octave: "1")
-        octaveChoice = "1"
+        octaveChoice = 1
     }
     @IBAction func twoButton(_ sender: Any) {
         setOctaveLabe(octave: "2")
-        octaveChoice = "2"
+        octaveChoice = 2
     }
     @IBAction func threeButton(_ sender: Any) {
         setOctaveLabe(octave: "3")
-        octaveChoice = "3"
+        octaveChoice = 3
     }
     @IBAction func fourButton(_ sender: Any) {
         setOctaveLabe(octave: "4")
-        octaveChoice = "4"
+        octaveChoice = 4
     }
     @IBAction func fiveButton(_ sender: Any) {
         setOctaveLabe(octave: "5")
-        octaveChoice = "5"
+        octaveChoice = 5
     }
     @IBAction func sixBUtton(_ sender: Any) {
         setOctaveLabe(octave: "6")
-        octaveChoice = "6"
+        octaveChoice = 6
     }
     @IBAction func sevenButton(_ sender: Any) {
         setOctaveLabe(octave: "7")
-        octaveChoice = "7"
+        octaveChoice = 7
     }
-    
-    
 }
 

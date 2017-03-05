@@ -20,7 +20,7 @@ class QueryBuilder{
         }
     }
     
-    func getNoteFromWolfram(queryString:URL){
+    func getNoteFromWolfram(queryString:URL) -> Note {
         var request = URLRequest(url: queryString)
         request.httpMethod = "GET"
         request.timeoutInterval = 10.0
@@ -47,10 +47,12 @@ class QueryBuilder{
                                                 let delimiter:Character = "_"
                                                 let fields = noteName.characters.split(separator: delimiter).map{ String($0)}
                                                 noteName = fields[0]
+                                                UserDefaults.standard.set(noteName, forKey: "noteName")
                                                 let fluff:String = fields[1]
                                                 let spaceDelimiter:Character = " "
                                                 let otherFields = fluff.characters.split(separator: spaceDelimiter).map{String($0)}
                                                 noteOctave = Int(otherFields[0])!
+                                                UserDefaults.standard.set(noteOctave, forKey: "noteOctave")
                                             }
                                         }
                                     }
@@ -76,17 +78,21 @@ class QueryBuilder{
                                     if let items = subpods[0] as? [String:Any]{
                                         for item in items{
                                             if let midi = item.value as? String {
-                                                item.key == "plaintext" ? noteMidi = Int(midi)!: print("midi value not found")
-                                                
+                                                if (item.key == "plaintext"){
+                                                    noteMidi = Int(midi)!
+                                                UserDefaults.standard.set(noteMidi, forKey: "midi")
+                                                    print("User Default Midi Value Set as \(midi)")}
+                                                else {
+                                                    print("midi value not found")
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                        let note = Note.init(pitch: notePitch.rounded(), noteName: noteName, octave: noteOctave, midi: nil)
-                        note.midi = noteMidi
-                        print("note name: \(note.noteName), note pitch: \(note.pitch), note midi: \(note.midi), note octave: \(note.octave)")
+                        
+                        
                         
                     }
                 }
@@ -94,8 +100,11 @@ class QueryBuilder{
             } catch {
                 print("Unable to retrieve response from wolfram")
             }
-            
-        }
+                    }
         task.resume()
+        let note = Note.init(pitch: notePitch.rounded(), noteName: noteName, octave: noteOctave, midi: noteMidi)
+        print("note name: \(note.noteName), note pitch: \(note.pitch), note midi: \(noteMidi), note octave: \(note.octave)")
+        return note
+
     }
 }

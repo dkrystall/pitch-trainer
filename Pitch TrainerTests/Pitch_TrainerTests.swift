@@ -101,13 +101,14 @@ class Pitch_TrainerTests: XCTestCase {
                                             if let midi = item.value as? String {
                                                 item.key == "plaintext" ? noteMidi = Int(midi)!: print("midi value not found")
                                                 
+                                                
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                        let note = Note.init(pitch: notePitch.rounded(), noteName: noteName, octave: noteOctave, midi: nil)
+                        let note = Note.init(pitch: notePitch.rounded(), noteName: noteName, octave: noteOctave, midi: noteMidi)
                         note.midi = noteMidi
                         print("note name: \(note.noteName), note pitch: \(note.pitch), note midi: \(note.midi), note octave: \(note.octave)")
                         XCTAssert(note.noteName! == "C" && note.pitch! == 523.0 && note.midi! == 72 && note.octave == 5)
