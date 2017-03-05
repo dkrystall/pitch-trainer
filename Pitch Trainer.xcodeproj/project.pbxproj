@@ -15,6 +15,14 @@
 		B62E0CEB1E6B5A6B005AA373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62E0CE91E6B5A6B005AA373 /* LaunchScreen.storyboard */; };
 		B62E0CF61E6B5A6C005AA373 /* Pitch_TrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0CF51E6B5A6B005AA373 /* Pitch_TrainerTests.swift */; };
 		B62E0D011E6B5A6C005AA373 /* Pitch_TrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D001E6B5A6C005AA373 /* Pitch_TrainerUITests.swift */; };
+		B62E0D101E6B6A67005AA373 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D0F1E6B6A67005AA373 /* Note.swift */; };
+		B62E0D111E6B6A67005AA373 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D0F1E6B6A67005AA373 /* Note.swift */; };
+		B62E0D131E6BCE66005AA373 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */; };
+		B62E0D141E6BCE66005AA373 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */; };
+		B62E0D161E6BD973005AA373 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D151E6BD973005AA373 /* AudioEngine.swift */; };
+		B62E0D171E6BD973005AA373 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D151E6BD973005AA373 /* AudioEngine.swift */; };
+		B62E0D191E6BDAF2005AA373 /* DeckBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */; };
+		B62E0D1A1E6BDAF2005AA373 /* DeckBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,10 @@
 		B62E0CFC1E6B5A6C005AA373 /* Pitch TrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch TrainerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E0D001E6B5A6C005AA373 /* Pitch_TrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_TrainerUITests.swift; sourceTree = "<group>"; };
 		B62E0D021E6B5A6C005AA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B62E0D0F1E6B6A67005AA373 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
+		B62E0D151E6BD973005AA373 /* AudioEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		B62E0CDD1E6B5A6B005AA373 /* Pitch Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				B62E0D0E1E6B6A54005AA373 /* model */,
 				B62E0CDE1E6B5A6B005AA373 /* AppDelegate.swift */,
 				B62E0CE01E6B5A6B005AA373 /* FirstViewController.swift */,
 				B62E0CE21E6B5A6B005AA373 /* SecondViewController.swift */,
@@ -126,6 +139,17 @@
 				B62E0D021E6B5A6C005AA373 /* Info.plist */,
 			);
 			path = "Pitch TrainerUITests";
+			sourceTree = "<group>";
+		};
+		B62E0D0E1E6B6A54005AA373 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B62E0D0F1E6B6A67005AA373 /* Note.swift */,
+				B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */,
+				B62E0D151E6BD973005AA373 /* AudioEngine.swift */,
+				B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62E0D161E6BD973005AA373 /* AudioEngine.swift in Sources */,
 				B62E0CE31E6B5A6B005AA373 /* SecondViewController.swift in Sources */,
 				B62E0CDF1E6B5A6B005AA373 /* AppDelegate.swift in Sources */,
+				B62E0D131E6BCE66005AA373 /* QueryBuilder.swift in Sources */,
 				B62E0CE11E6B5A6B005AA373 /* FirstViewController.swift in Sources */,
+				B62E0D191E6BDAF2005AA373 /* DeckBuilder.swift in Sources */,
+				B62E0D101E6B6A67005AA373 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62E0D171E6BD973005AA373 /* AudioEngine.swift in Sources */,
+				B62E0D141E6BCE66005AA373 /* QueryBuilder.swift in Sources */,
 				B62E0CF61E6B5A6C005AA373 /* Pitch_TrainerTests.swift in Sources */,
+				B62E0D1A1E6BDAF2005AA373 /* DeckBuilder.swift in Sources */,
+				B62E0D111E6B6A67005AA373 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
