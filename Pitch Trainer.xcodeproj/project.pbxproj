@@ -19,10 +19,20 @@
 		B62E0D111E6B6A67005AA373 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D0F1E6B6A67005AA373 /* Note.swift */; };
 		B62E0D131E6BCE66005AA373 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */; };
 		B62E0D141E6BCE66005AA373 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */; };
-		B62E0D161E6BD973005AA373 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D151E6BD973005AA373 /* AudioEngine.swift */; };
-		B62E0D171E6BD973005AA373 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D151E6BD973005AA373 /* AudioEngine.swift */; };
 		B62E0D191E6BDAF2005AA373 /* DeckBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */; };
 		B62E0D1A1E6BDAF2005AA373 /* DeckBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */; };
+		B665D7281E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = B665D7271E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 */; };
+		B665D7291E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = B665D7271E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 */; };
+		B665D72B1E6C1CE700DF1D8A /* casio.wav in Resources */ = {isa = PBXBuildFile; fileRef = B665D72A1E6C1CE700DF1D8A /* casio.wav */; };
+		B665D72C1E6C1CE700DF1D8A /* casio.wav in Resources */ = {isa = PBXBuildFile; fileRef = B665D72A1E6C1CE700DF1D8A /* casio.wav */; };
+		B665D72E1E6C200400DF1D8A /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665D72D1E6C200400DF1D8A /* MIDISampler.swift */; };
+		B665D72F1E6C200400DF1D8A /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665D72D1E6C200400DF1D8A /* MIDISampler.swift */; };
+		B665D7311E6C229000DF1D8A /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665D7301E6C229000DF1D8A /* Sound.swift */; };
+		B665D7321E6C229000DF1D8A /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665D7301E6C229000DF1D8A /* Sound.swift */; };
+		B665D7341E6C233300DF1D8A /* sibeliusGMajor.mid in Resources */ = {isa = PBXBuildFile; fileRef = B665D7331E6C233300DF1D8A /* sibeliusGMajor.mid */; };
+		B665D7351E6C233300DF1D8A /* sibeliusGMajor.mid in Resources */ = {isa = PBXBuildFile; fileRef = B665D7331E6C233300DF1D8A /* sibeliusGMajor.mid */; };
+		B665D7381E6C234F00DF1D8A /* ntbldmtn.mid in Resources */ = {isa = PBXBuildFile; fileRef = B665D7371E6C234F00DF1D8A /* ntbldmtn.mid */; };
+		B665D7391E6C234F00DF1D8A /* ntbldmtn.mid in Resources */ = {isa = PBXBuildFile; fileRef = B665D7371E6C234F00DF1D8A /* ntbldmtn.mid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +69,14 @@
 		B62E0D021E6B5A6C005AA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B62E0D0F1E6B6A67005AA373 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
-		B62E0D151E6BD973005AA373 /* AudioEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckBuilder.swift; sourceTree = "<group>"; };
+		B665D7271E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeneralUser GS MuseScore v1.442.sf2"; sourceTree = "<group>"; };
+		B665D72A1E6C1CE700DF1D8A /* casio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = casio.wav; sourceTree = "<group>"; };
+		B665D72D1E6C200400DF1D8A /* MIDISampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISampler.swift; sourceTree = "<group>"; };
+		B665D7301E6C229000DF1D8A /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		B665D7331E6C233300DF1D8A /* sibeliusGMajor.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = sibeliusGMajor.mid; sourceTree = "<group>"; };
+		B665D7361E6C234100DF1D8A /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; path = gs_instruments.dls; sourceTree = "<group>"; };
+		B665D7371E6C234F00DF1D8A /* ntbldmtn.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = ntbldmtn.mid; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,11 @@
 		B62E0CDD1E6B5A6B005AA373 /* Pitch Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				B665D7271E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 */,
+				B665D7331E6C233300DF1D8A /* sibeliusGMajor.mid */,
+				B665D72A1E6C1CE700DF1D8A /* casio.wav */,
+				B665D7371E6C234F00DF1D8A /* ntbldmtn.mid */,
+				B665D7361E6C234100DF1D8A /* gs_instruments.dls */,
 				B62E0D0E1E6B6A54005AA373 /* model */,
 				B62E0CDE1E6B5A6B005AA373 /* AppDelegate.swift */,
 				B62E0CE01E6B5A6B005AA373 /* FirstViewController.swift */,
@@ -146,8 +167,9 @@
 			children = (
 				B62E0D0F1E6B6A67005AA373 /* Note.swift */,
 				B62E0D121E6BCE66005AA373 /* QueryBuilder.swift */,
-				B62E0D151E6BD973005AA373 /* AudioEngine.swift */,
 				B62E0D181E6BDAF2005AA373 /* DeckBuilder.swift */,
+				B665D72D1E6C200400DF1D8A /* MIDISampler.swift */,
+				B665D7301E6C229000DF1D8A /* Sound.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -262,6 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B665D7381E6C234F00DF1D8A /* ntbldmtn.mid in Resources */,
+				B665D7341E6C233300DF1D8A /* sibeliusGMajor.mid in Resources */,
+				B665D72B1E6C1CE700DF1D8A /* casio.wav in Resources */,
+				B665D7281E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 in Resources */,
 				B62E0CEB1E6B5A6B005AA373 /* LaunchScreen.storyboard in Resources */,
 				B62E0CE81E6B5A6B005AA373 /* Assets.xcassets in Resources */,
 				B62E0CE61E6B5A6B005AA373 /* Main.storyboard in Resources */,
@@ -272,6 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B665D7351E6C233300DF1D8A /* sibeliusGMajor.mid in Resources */,
+				B665D72C1E6C1CE700DF1D8A /* casio.wav in Resources */,
+				B665D7291E6C1A6D00DF1D8A /* GeneralUser GS MuseScore v1.442.sf2 in Resources */,
+				B665D7391E6C234F00DF1D8A /* ntbldmtn.mid in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E0D161E6BD973005AA373 /* AudioEngine.swift in Sources */,
 				B62E0CE31E6B5A6B005AA373 /* SecondViewController.swift in Sources */,
 				B62E0CDF1E6B5A6B005AA373 /* AppDelegate.swift in Sources */,
+				B665D72E1E6C200400DF1D8A /* MIDISampler.swift in Sources */,
 				B62E0D131E6BCE66005AA373 /* QueryBuilder.swift in Sources */,
 				B62E0CE11E6B5A6B005AA373 /* FirstViewController.swift in Sources */,
 				B62E0D191E6BDAF2005AA373 /* DeckBuilder.swift in Sources */,
+				B665D7311E6C229000DF1D8A /* Sound.swift in Sources */,
 				B62E0D101E6B6A67005AA373 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +334,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E0D171E6BD973005AA373 /* AudioEngine.swift in Sources */,
+				B665D7321E6C229000DF1D8A /* Sound.swift in Sources */,
 				B62E0D141E6BCE66005AA373 /* QueryBuilder.swift in Sources */,
 				B62E0CF61E6B5A6C005AA373 /* Pitch_TrainerTests.swift in Sources */,
+				B665D72F1E6C200400DF1D8A /* MIDISampler.swift in Sources */,
 				B62E0D1A1E6BDAF2005AA373 /* DeckBuilder.swift in Sources */,
 				B62E0D111E6B6A67005AA373 /* Note.swift in Sources */,
 			);
@@ -550,6 +582,7 @@
 				B62E0D071E6B5A6C005AA373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B62E0D081E6B5A6C005AA373 /* Build configuration list for PBXNativeTarget "Pitch TrainerTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +591,7 @@
 				B62E0D0A1E6B5A6C005AA373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B62E0D0B1E6B5A6C005AA373 /* Build configuration list for PBXNativeTarget "Pitch TrainerUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +600,7 @@
 				B62E0D0D1E6B5A6C005AA373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
